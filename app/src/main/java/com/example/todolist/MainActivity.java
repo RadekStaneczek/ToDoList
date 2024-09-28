@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog,int i)
                             {
+                                TaskList.add(new TaskModel(editText.getText().toString()));
                                 dialog.dismiss();
                             }
                         }).create();
@@ -70,8 +71,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    public void TaskAdd(EditText Task)
-    {
 
-    }
 }
