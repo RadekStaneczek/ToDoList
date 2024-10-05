@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
                 TextInputEditText editText = view1.findViewById(R.id.editText);
 
-
                 AlertDialog dialog = new MaterialAlertDialogBuilder(MainActivity.this)
                     .setTitle("Enter Task")
                     .setView(view1)
@@ -61,7 +60,14 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog,int i)
                             {
-                                TaskList.add(new TaskModel(editText.getText().toString()));
+                                if(editText.getText().toString().isEmpty())
+                                {
+                                    dialog.dismiss();
+                                }
+                                else
+                                {
+                                    TaskList.add(new TaskModel(editText.getText().toString()));
+                                }
                                 dialog.dismiss();
                             }
                         }).create();

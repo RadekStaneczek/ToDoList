@@ -14,7 +14,7 @@
         android:layout_height="4dp"
         android:layout_marginTop="76dp"
         android:background="?android:attr/listDivider"
-        android:backgroundTint="#c281f0"
+        android:backgroundTint="#C4B7FF"
         android:backgroundTintMode="add"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
