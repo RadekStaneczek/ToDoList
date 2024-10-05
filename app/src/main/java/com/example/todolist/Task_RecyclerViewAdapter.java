@@ -39,6 +39,17 @@ public class Task_RecyclerViewAdapter extends RecyclerView.Adapter<Task_Recycler
         return TaskList.size();
     }
 
+
+    public void deleteItem(int position)
+    {
+        TaskList.remove(position);
+        notifyItemRemoved(position);
+    }
+    public void editItem(int position)
+    {
+        TaskList.get(position).SetTaskName("Works");
+        notifyItemChanged(position);
+    }
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         CheckBox TaskName;
         public MyViewHolder(@NonNull View itemView) {

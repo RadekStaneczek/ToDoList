@@ -11,4 +11,6 @@ public class TaskModel {
     {
         return TaskName;
     }
+    public String DeleteTaskName(){return TaskName = "";}
+    public void SetTaskName(String Change){TaskName = Change;}
 }
