@@ -45,9 +45,9 @@ public class Task_RecyclerViewAdapter extends RecyclerView.Adapter<Task_Recycler
         TaskList.remove(position);
         notifyItemRemoved(position);
     }
-    public void editItem(int position)
+    public void editItem(int position,String NewTaskName)
     {
-        TaskList.get(position).SetTaskName("Works");
+        TaskList.get(position).SetTaskName(NewTaskName);
         notifyItemChanged(position);
     }
     public static class MyViewHolder extends RecyclerView.ViewHolder{
